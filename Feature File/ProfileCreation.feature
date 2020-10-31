@@ -6,7 +6,7 @@
  
 	
 
-@add, update and delete profile details
+@profile
 Scenario: Add language in the profile details
 	Given I login to the website with valid credentials
 	When I try to add new language on profile page
