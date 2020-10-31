@@ -217,6 +217,7 @@ namespace Mars_QA_Specflow_T1.Pages
 
         }
 
+        // validate updated educational details
         internal void IsEducationUpdated(IWebDriver driver)
         {
             Thread.Sleep(1000);

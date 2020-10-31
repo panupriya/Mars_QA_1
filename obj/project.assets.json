@@ -6260,11 +6260,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ic test\\IC Mars-QA1\\Mars_QA_Specflow_T1\\Mars_QA_Specflow_T1.csproj",
+      "projectUniqueName": "D:\\ic test\\Repo-IC Mars-QA1\\Mars_QA_1\\Mars_QA_Specflow_T1.csproj",
       "projectName": "Mars_QA_Specflow_T1",
-      "projectPath": "D:\\ic test\\IC Mars-QA1\\Mars_QA_Specflow_T1\\Mars_QA_Specflow_T1.csproj",
+      "projectPath": "D:\\ic test\\Repo-IC Mars-QA1\\Mars_QA_1\\Mars_QA_Specflow_T1.csproj",
       "packagesPath": "C:\\Users\\sandy\\.nuget\\packages\\",
-      "outputPath": "D:\\ic test\\IC Mars-QA1\\Mars_QA_Specflow_T1\\obj\\",
+      "outputPath": "D:\\ic test\\Repo-IC Mars-QA1\\Mars_QA_1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sandy\\AppData\\Roaming\\NuGet\\NuGet.Config",
