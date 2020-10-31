@@ -11,50 +11,50 @@ namespace Mars_QA_Specflow_T1
     class Program
     {
 
-        static void Main(string[] args)
-        {
-            Console.WriteLine("HelloWorld");
-            // Intialise and define chrome driver
-            IWebDriver driver = new ChromeDriver();
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine("HelloWorld");
+        //    // Intialise and define chrome driver
+        //    IWebDriver driver = new ChromeDriver();
 
-            string country = "India";
-            string title = "B.Tech";
-            string year = "2011";
-            string titleName = "M.Tech";
+        //    string country = "India";
+        //    string title = "B.Tech";
+        //    string year = "2011";
+        //    string titleName = "M.Tech";
 
-            //object init and define for login page
-            LoginPage loginobj = new LoginPage();
-            loginobj.LoginSteps(driver);
+        //    //object init and define for login page
+        //    LoginPage loginobj = new LoginPage();
+        //    loginobj.LoginSteps(driver);
 
-            //scenario -1 add language
-            ProfilePage profileobj = new ProfilePage();
-            profileobj.AddLanguage(driver);
+        //    //scenario -1 add language
+        //    ProfilePage profileobj = new ProfilePage();
+        //    profileobj.AddLanguage(driver);
 
-            profileobj.IsLanguageAdded(driver);
+        //    profileobj.IsLanguageAdded(driver);
 
-            //scenario -2 delete added language
-            ProfilePage proDel = new ProfilePage();
-            proDel.DeleteLanguage(driver);
+        //    //scenario -2 delete added language
+        //    ProfilePage proDel = new ProfilePage();
+        //    proDel.DeleteLanguage(driver);
 
-            proDel.IsLanguageDeleted(driver);
+        //    proDel.IsLanguageDeleted(driver);
 
-            //scenario -3 Add education
+        //    //scenario -3 Add education
 
-            ProfilePage addEdu = new ProfilePage();
+        //    ProfilePage addEdu = new ProfilePage();
 
-            addEdu.AddEducation(driver, country, title, year);
+        //    addEdu.AddEducation(driver, country, title, year);
 
-            addEdu.IsEducationAdded(driver);
+        //    addEdu.IsEducationAdded(driver);
 
-            //scenario -3(a) update education
-            ProfilePage updateEdu = new ProfilePage();
-            updateEdu.UpdateEducation(driver, titleName);
+        //    //scenario -3(a) update education
+        //    ProfilePage updateEdu = new ProfilePage();
+        //    updateEdu.UpdateEducation(driver, titleName);
 
-            updateEdu.IsEducationUpdated(driver);
+        //    updateEdu.IsEducationUpdated(driver);
 
-            // close instances of open chrome driver
-            driver.Dispose();
-        }
+        //    // close instances of open chrome driver
+        //    driver.Dispose();
+        //}
 
 
 

@@ -10,18 +10,14 @@ namespace Mars_QA_Specflow_T1.Steps
     [Binding]
     public sealed class ProfileDetailsStepDefinition
     {
-        //static void Main(string[] args)
-        //{
-
-        //}
         IWebDriver driver;
         [BeforeScenario]
 
         public void LaunchBrowser()
         {
-            // initiate driver
+            // initialise driver
             driver = new ChromeDriver();
-            // driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));//FirefoxDriver
+            
         }
 
         [AfterScenario]
