@@ -76,21 +76,11 @@ namespace Mars_QA_Specflow_T1.FeatureFile
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add language in the profile details")]
-        [NUnit.Framework.CategoryAttribute("add,")]
-        [NUnit.Framework.CategoryAttribute("update")]
-        [NUnit.Framework.CategoryAttribute("and")]
-        [NUnit.Framework.CategoryAttribute("delete")]
         [NUnit.Framework.CategoryAttribute("profile")]
-        [NUnit.Framework.CategoryAttribute("details")]
         public virtual void AddLanguageInTheProfileDetails()
         {
             string[] tagsOfScenario = new string[] {
-                    "add,",
-                    "update",
-                    "and",
-                    "delete",
-                    "profile",
-                    "details"};
+                    "profile"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add language in the profile details", null, tagsOfScenario, argumentsOfScenario);
 #line 10

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Mars_QA_Specflow_T1.Helpers;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -31,9 +32,10 @@ namespace Mars_QA_Specflow_T1.Pages
             // click on login button
             IWebElement loginButton = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button"));
             loginButton.Click();
-            Thread.Sleep(10000);
+            //Thread.Sleep(10000);
             try
             {
+                Wait.WaitForElement(driver, "XPath", "//*[contains(text(),'Ishaan Sandeep')]", 10000);
                 // check login is successfull
                 var loginCheck = "test";
                 loginCheck = driver.FindElement(By.XPath("//*[contains(text(),'Ishaan Sandeep')]")).GetAttribute("innerText");

@@ -111,9 +111,9 @@ D:\ic test\IC Mars-QA1\Mars_QA_Specflow_T1\obj\Debug\netcoreapp3.1\Mars_QA_Specf
 D:\ic test\IC Mars-QA1\Mars_QA_Specflow_T1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.dll
 D:\ic test\IC Mars-QA1\Mars_QA_Specflow_T1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.pdb
 D:\ic test\IC Mars-QA1\Mars_QA_Specflow_T1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.genruntimeconfig.cache
-D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\testhost.exe
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\testhost.dll
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
+D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\testhost.exe
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\nunit.engine.dll
@@ -217,7 +217,6 @@ D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.csprojAssemblyReference.cache
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.AssemblyInfoInputs.cache
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.AssemblyInfo.cs
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.csproj.CoreCompileInputs.cache
