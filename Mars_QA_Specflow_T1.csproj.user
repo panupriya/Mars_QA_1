@@ -2,7 +2,16 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Steps\ProfileDetailsStepDefinition.cs">
+    <Compile Update="Step Definition\CertificationStep.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Step Definition\EducationStep.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Step Definition\LanguageStep.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Step Definition\SkillsStep.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

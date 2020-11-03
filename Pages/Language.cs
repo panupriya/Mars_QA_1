@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace Mars_QA_Specflow_T1.Pages
 {
-    class ProfilePage
+    class Language
     {
 
 
@@ -59,7 +59,9 @@ namespace Mars_QA_Specflow_T1.Pages
             IWebElement add1 = driver.FindElement(By.XPath("//input[@value='Add']"));
             add1.Click();
         }
+
         
+      
         //Add language validation
         internal void IsLanguageAdded(IWebDriver driver)
         {
@@ -137,108 +139,51 @@ namespace Mars_QA_Specflow_T1.Pages
 
         }
 
-        // Add education details
-        internal void AddEducation(IWebDriver driver, string country, string title, string year)
+        //Update language
+        internal void UpdateLanguage(IWebDriver driver)
         {
-            //Thread.Sleep(5000);
-            Wait.WaitForElement(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]", 5000);
-           //click on education
-           IWebElement addedu = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]"));
-            addedu.Click();
+            //click on language which is to be updated
+            Wait.WaitForElementVisibility(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[1]", 10000);
+            IWebElement updateLag = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[1]"));
+            updateLag.Click();
 
-            //click on add new education
-            IWebElement addnewedu = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/thead/tr/th[6]/div"));
-            addnewedu.Click();
-
-            //Add educational details--country from dropdown list
-            IWebElement countrydpdn = driver.FindElement(By.Name("country"));
-            countrydpdn.Click();
-            new SelectElement(driver.FindElement(By.Name("country"))).SelectByText(country);
-
-
-            //Add educational details -- title from drop list
-            IWebElement titledpdn = driver.FindElement(By.Name("title"));
-            titledpdn.Click();
-            new SelectElement(driver.FindElement(By.Name("title"))).SelectByText(title);
-
-            //Add educational details-- Year of graduation
-
-            IWebElement yeardpdn = driver.FindElement(By.Name("yearOfGraduation"));
-            yeardpdn.Click();
-            new SelectElement(driver.FindElement(By.Name("yearOfGraduation"))).SelectByText(year);
-
-            //input institute name
-            IWebElement institute = driver.FindElement(By.Name("instituteName"));
-            institute.SendKeys("Sree Buddhha College");
-            //input degree
-            IWebElement degree = driver.FindElement(By.Name("degree"));
-            degree.SendKeys("EEE");
-
-            //Thread.Sleep(1000);
-            Wait.WaitForElement(driver, "XPath", "//input[@value='Add']", 1000);
-           //click on add education
-           IWebElement addnew = driver.FindElement(By.XPath("//input[@value='Add']"));
-            addnew.Click();
-
-      
-        }
-
-        // addeducation validation
-
-        internal void IsEducationAdded(IWebDriver driver)
-        {
-            //Thread.Sleep(1000);
-            Wait.WaitForElement(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td[1]", 1000);
-           IWebElement eduVal = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td[1]"));
-            if(eduVal.Text == "India")
-            {
-                Console.WriteLine("Education details added successfully ");
-            }
-            else
-            {
-                Console.WriteLine("Education details are not added successfully ");
-            }
-        }
-
-        //Update education details
-        internal void UpdateEducation(IWebDriver driver, string titleName)
-        {
-            //Thread.Sleep(5000);
-            Wait.WaitForElement(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]", 5000);
-            //click on education
-            IWebElement updateedu = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]"));
-            updateedu.Click();
-
-            //click on update education
-            IWebElement updateEdu = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td[6]/span[1]/i"));
-            updateEdu.Click();
-
-            //Update educational details -- title from drop list
-            IWebElement titledn = driver.FindElement(By.Name("title"));
-            titledn.Click();
-            new SelectElement(driver.FindElement(By.Name("title"))).SelectByText(titleName);
-
-            Thread.Sleep(1000);
-            //click on update education
-            IWebElement update = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td/div[3]/input[1]"));
+            //click on update button corresponding to the language
+            Wait.WaitForElementVisibility(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[3]/span[1]/i", 1000);
+            IWebElement update = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[3]/span[1]/i"));
             update.Click();
 
+            //update language from dropdown list
+
+            //select language level
+            IWebElement langLevel = driver.FindElement(By.Name("level"));
+            langLevel.Click();
+
+            new SelectElement(driver.FindElement(By.Name("level"))).SelectByText("Fluent");
+
+            //click on update
+            IWebElement add = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td/div/span/input[1]"));
+            add.Click();
+
+
         }
 
-        // validate updated educational details
-        internal void IsEducationUpdated(IWebDriver driver)
+        //Update language validation
+
+        internal void IsLanguageUpdateed(IWebDriver driver)
         {
-            //Thread.Sleep(1000);
-            Wait.WaitForElement(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td[3]", 1000);
-            IWebElement eduUpVal = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td[3]"));
-            if (eduUpVal.Text == "M.Tech")
+            Wait.WaitForElementVisibility(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[2]", 5000);
+            IWebElement updatedlang = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[2]"));
+            if (updatedlang.Text == "Fluent")
             {
-                Console.WriteLine("Education details updated successfully ");
+                Console.WriteLine("Language updateded succesfully");
+
             }
             else
             {
-                Console.WriteLine("Education details are not updated successfully ");
+                Console.WriteLine("Language is not updated");
+
             }
+
         }
 
 

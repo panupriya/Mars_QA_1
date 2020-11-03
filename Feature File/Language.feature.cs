@@ -20,23 +20,22 @@ namespace Mars_QA_Specflow_T1.FeatureFile
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ProfileCreation")]
-    public partial class ProfileCreationFeature
+    [NUnit.Framework.DescriptionAttribute("Language")]
+    public partial class LanguageFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "ProfileCreation.feature"
+#line 1 "Language.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feature File", "ProfileCreation", "\t As a seller\r\n       I would like to add my profile details\r\n\t   so that people " +
-                    "seeking for skills can look into my details", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feature File", "Language", "\t As a seller \r\n\t I would like to Add, Edit and Delete language", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,15 +74,15 @@ namespace Mars_QA_Specflow_T1.FeatureFile
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add language in the profile details")]
-        [NUnit.Framework.CategoryAttribute("profile")]
-        public virtual void AddLanguageInTheProfileDetails()
+        [NUnit.Framework.DescriptionAttribute("Add new Language")]
+        [NUnit.Framework.CategoryAttribute("Language")]
+        public virtual void AddNewLanguage()
         {
             string[] tagsOfScenario = new string[] {
-                    "profile"};
+                    "Language"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add language in the profile details", null, tagsOfScenario, argumentsOfScenario);
-#line 10
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add new Language", null, tagsOfScenario, argumentsOfScenario);
+#line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -103,27 +102,27 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 11
- testRunner.Given("I login to the website with valid credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 7
+ testRunner.Given("I login to website with valid credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 12
- testRunner.When("I try to add new language on profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+ testRunner.When("I try to add new Language on profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 13
- testRunner.Then("Selled should able to add new language successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 9
+ testRunner.Then("Seller should able to add new language successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Delete new seller language details on profile page")]
-        public virtual void DeleteNewSellerLanguageDetailsOnProfilePage()
+        [NUnit.Framework.DescriptionAttribute("Update Language")]
+        public virtual void UpdateLanguage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete new seller language details on profile page", null, tagsOfScenario, argumentsOfScenario);
-#line 15
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update Language", null, tagsOfScenario, argumentsOfScenario);
+#line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -143,27 +142,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 16
-   testRunner.Given("I try to delete existing language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 13
+ testRunner.Given("I login to website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 17
-   testRunner.Then("Seller able to delete existing language successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 14
+ testRunner.When("I edit the Language record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 15
+ testRunner.Then("Seller should able to edit language successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add  education details on profile page")]
-        [NUnit.Framework.TestCaseAttribute("India", "B.Tech", "2011", null)]
-        public virtual void AddEducationDetailsOnProfilePage(string country, string title, string year, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("Delete Language")]
+        public virtual void DeleteLanguage()
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Country", country);
-            argumentsOfScenario.Add("Title", title);
-            argumentsOfScenario.Add("Year", year);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add  education details on profile page", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete Language", null, tagsOfScenario, argumentsOfScenario);
 #line 19
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -185,55 +183,10 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 20
- testRunner.Given("I login the website with valid credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("I click in Delete Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 21
- testRunner.When(string.Format("I add education details \'{0}\',\'{1}\',\'{2}\'", country, title, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 22
- testRunner.Then("Seller should able to add education details successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Update the education details")]
-        [NUnit.Framework.TestCaseAttribute("M.Tech", null)]
-        public virtual void UpdateTheEducationDetails(string title, string[] exampleTags)
-        {
-            string[] tagsOfScenario = exampleTags;
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Title", title);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update the education details", null, tagsOfScenario, argumentsOfScenario);
-#line 27
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 28
-    testRunner.Given("I login to website for updating education details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 29
-    testRunner.When(string.Format("I update the education detail\'{0}\'", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 30
-    testRunner.Then("I should be able to update the education detail successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+     testRunner.Then("Seller able to delete language successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
