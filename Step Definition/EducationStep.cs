@@ -72,5 +72,26 @@ namespace Mars_QA_Specflow_T1.Steps_Definision
             updateeduval.IsEducationUpdated(driver);
         }
 
+        //Delete educational details
+        [Given(@"I click in Delete Education Button")]
+        public void GivenIClickInDeleteEducationButton()
+        {
+            var signin = new LoginPage();
+            signin.LoginSteps(driver);
+
+            var delEdu = new Education();
+            delEdu.DeleteEducation(driver);
+        }
+
+
+        [Then(@"Seller able to delete education successfully")]
+        public void ThenSellerAbleToDeleteEducationSuccessfully()
+        {
+            var checkEdel = new Education();
+            checkEdel.IsEducationDeleted(driver);
+        }
+
+
+
     }
 }

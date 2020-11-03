@@ -73,6 +73,7 @@ namespace Mars_QA_Specflow_T1.Pages
             }
         }
 
+
         //Update education details
         internal void UpdateEducation(IWebDriver driver, string titleName)
         {
@@ -113,8 +114,51 @@ namespace Mars_QA_Specflow_T1.Pages
                 Console.WriteLine("Education details are not updated successfully ");
             }
         }
-        
+
         //Delete educational details
+        internal void DeleteEducation(IWebDriver driver)
+        {
+            //Thread.Sleep(5000);
+            Wait.WaitForElementVisibility(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]", 10000);
+            //click on education
+            IWebElement edu = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]"));
+            edu.Click();
+            
+            // Thread.Sleep(20000);
+            Wait.WaitForElement(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[1]", 20000);
+            try
+            {
+                //Select education to delete
+                IWebElement eduToDel = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
+                eduToDel.Click();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("canot able to locate element", ex.Message);
+            }
+            Wait.WaitForElement(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[2]/tr/td[6]/span[2]/i", 20000);
+           //click on delete cross button
+           IWebElement cross = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[2]/tr/td[6]/span[2]/i"));
+            cross.Click();
+        }
+
+        
         //validate deleted successfully or not
+        internal void IsEducationDeleted(IWebDriver driver)
+        {
+            //Thread.Sleep(10000);
+            Wait.WaitForElement(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[3]", 1000);
+            //Select language to delete
+            IWebElement deledu = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[3]"));
+            if (deledu.Text != "M.Tech")
+            {
+                Console.WriteLine("Education deleted succesfully");
+
+            }
+            else
+            {
+                Console.WriteLine("Education is not deleted sucessfully");
+            }
+        }
     }
 }

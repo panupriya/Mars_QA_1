@@ -19,3 +19,7 @@ Scenario: Update the education details
     Examples:
 	| Title |
 	| M.Tech |
+
+Scenario: Delete Education
+	 Given  I click in Delete Education Button
+     Then Seller able to delete education successfully
