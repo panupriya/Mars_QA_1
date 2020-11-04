@@ -11,9 +11,9 @@ Scenario: Add new Certifications
 
 Scenario: Edit Certifications
 	Given I login to the website for editing certification
-	And  I click in Edit Button for certifications
-	When I edit the Certification record and dispaly the alert message
-	Then I am able to verify that Certifications edited successfully 
+	When  I click in Edit Button for certifications
+	And I edit the Certification record and dispaly the alert message
+    Then I am able to verify that Certifications edited successfully 
 
 
 
