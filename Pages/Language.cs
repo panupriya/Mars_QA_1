@@ -161,7 +161,7 @@ namespace Mars_QA_Specflow_T1.Pages
             new SelectElement(driver.FindElement(By.Name("level"))).SelectByText("Fluent");
 
             //click on update
-            IWebElement add = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td/div/span/input[1]"));
+            IWebElement add =driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td/div/span/input[1]"));
             add.Click();
 
 
