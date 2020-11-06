@@ -101,11 +101,11 @@ namespace Mars_QA_Specflow_T1.Pages
         internal void DeleteLanguage(IWebDriver driver)
         {
             // Thread.Sleep(20000);
-            Wait.WaitForElement(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]", 20000);
+            Wait.WaitForElement(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]", 20000);
             try
             {
                 //Select language to delete
-                IWebElement lanToDel = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]"));
+                IWebElement lanToDel = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
                 lanToDel.Click();
             }
             catch(Exception ex)
@@ -113,7 +113,7 @@ namespace Mars_QA_Specflow_T1.Pages
                 Console.WriteLine("canot able to locate element", ex.Message);
             }
             //click on delete cross button
-            IWebElement cross = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[3]/span[2]/i"));
+            IWebElement cross = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[2]/tr/td[3]/span[2]/i"));
             cross.Click();
         }
 
@@ -123,17 +123,17 @@ namespace Mars_QA_Specflow_T1.Pages
         internal void IsLanguageDeleted(IWebDriver driver)
         {
             //Thread.Sleep(10000);
-            Wait.WaitForElement(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]", 1000);
+            Wait.WaitForElement(driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]", 10000);
            //Select language to delete
-           IWebElement del = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]"));
-            if (del.Text != "English")
+           IWebElement del = driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
+            if (del.Text != "Malayalam")
             {
                 Console.WriteLine("Language deleted succesfully");
 
             }
             else
             {
-                Console.WriteLine("language is not deleted sucessfully");
+                Console.WriteLine("Language is not deleted sucessfully");
             }
                
 
