@@ -1,6 +1,6 @@
 ﻿Feature: Skills
 	As a seller
-	I would like to add my skills
+	I would like to add,edit and delete my skills
 	
 @Skills
 Scenario: Add new Skills

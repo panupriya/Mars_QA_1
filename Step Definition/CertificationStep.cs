@@ -64,9 +64,6 @@ namespace Mars_QA_Specflow_T1.Steps_Definision
         }
 
 
-
-
-
         //Delete certification
         [Given(@"I go to certification and try to delete it")]
         public void GivenIGoToCertificationAndTryToDeleteIt()
@@ -82,7 +79,6 @@ namespace Mars_QA_Specflow_T1.Steps_Definision
             var valdelCertifi = new Certification();
             valdelCertifi.ValidateDeletedCertification();
         }
-
 
     }
 }

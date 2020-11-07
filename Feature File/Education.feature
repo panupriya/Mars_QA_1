@@ -1,7 +1,7 @@
 ﻿Feature: Educational details
 	
 	As a seller
-	I would like to add my educational details
+	I would like to add,edit and delete my educational details
 
 @Education
 Scenario: Add  education details on profile page

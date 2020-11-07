@@ -13,7 +13,7 @@ namespace Mars_QA_Specflow_T1.Pages
         // Add education details
         internal void AddEducation(string country, string title, string year)
         {
-            //Thread.Sleep(5000);
+            
             Wait.WaitForElement(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]", 5000);
             //click on education
             IWebElement addedu = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]"));
@@ -47,7 +47,7 @@ namespace Mars_QA_Specflow_T1.Pages
             IWebElement degree = Driver.driver.FindElement(By.Name("degree"));
             degree.SendKeys("EEE");
 
-            //Thread.Sleep(1000);
+            
             Wait.WaitForElement(Driver.driver, "XPath", "//input[@value='Add']", 1000);
             //click on add education
             IWebElement addnew = Driver.driver.FindElement(By.XPath("//input[@value='Add']"));
@@ -96,7 +96,7 @@ namespace Mars_QA_Specflow_T1.Pages
 
         internal void IsEducationAdded()
         {
-            //Thread.Sleep(1000);
+           
             Wait.WaitForElement(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td[1]", 1000);
             IWebElement eduVal = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td[1]"));
             if (eduVal.Text == "India")
@@ -113,7 +113,7 @@ namespace Mars_QA_Specflow_T1.Pages
         //Update education details
         internal void UpdateEducation(string titleName)
         {
-            //Thread.Sleep(5000);
+            
             Wait.WaitForElement(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]", 5000);
             //click on education
             IWebElement updateedu = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]"));
@@ -127,9 +127,9 @@ namespace Mars_QA_Specflow_T1.Pages
             IWebElement titledn = Driver.driver.FindElement(By.Name("title"));
             titledn.Click();
             new SelectElement(Driver.driver.FindElement(By.Name("title"))).SelectByText(titleName);
-
-            Thread.Sleep(1000);
+            
             //click on update education
+            Wait.WaitForElement(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td/div[3]/input[1]", 5000);
             IWebElement update = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td/div[3]/input[1]"));
             update.Click();
 
@@ -138,7 +138,7 @@ namespace Mars_QA_Specflow_T1.Pages
         // validate updated educational details
         internal void IsEducationUpdated()
         {
-            //Thread.Sleep(1000);
+            
             Wait.WaitForElement(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td[3]", 1000);
             IWebElement eduUpVal = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td[3]"));
             if (eduUpVal.Text == "M.Tech")
@@ -154,13 +154,13 @@ namespace Mars_QA_Specflow_T1.Pages
         //Delete educational details
         internal void DeleteEducation()
         {
-            //Thread.Sleep(5000);
+            
             Wait.WaitForElementVisibility(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]", 10000);
             //click on education
             IWebElement edu = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]"));
             edu.Click();
             
-            // Thread.Sleep(20000);
+            
             Wait.WaitForElement(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[1]", 20000);
             try
             {
@@ -182,7 +182,7 @@ namespace Mars_QA_Specflow_T1.Pages
         //validate deleted successfully or not
         internal void IsEducationDeleted()
         {
-            //Thread.Sleep(10000);
+           
             Wait.WaitForElement(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[3]", 1000);
             //Select language to delete
             IWebElement deledu = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[3]"));

@@ -1,8 +1,8 @@
 ﻿Feature: Language
 	 As a seller 
 	 I would like to Add, Edit and Delete language
-@Language
 
+@Language
 Scenario: Add new Language
 	Given I login to website with valid credentials
 	When  I try to add new Language on profile page

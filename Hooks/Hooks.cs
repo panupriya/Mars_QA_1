@@ -13,7 +13,6 @@ namespace Mars_QA_Specflow_T1.Hooks
     public sealed class Hooks
     {
 
-        
         [BeforeScenario]
         public void Setup()
         {
@@ -22,7 +21,6 @@ namespace Mars_QA_Specflow_T1.Hooks
             Driver driver = new Driver();
             driver.Initialize();
 
-
             //ExcelLibHelper.PopulateInCollection(@"D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\Data\Mars.xlsx", "Credentials");
 
         }
@@ -30,9 +28,7 @@ namespace Mars_QA_Specflow_T1.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-            
-            
-             // close the window and release the memory
+            // close the window and release the memory
             Driver.driver.Dispose();
             
         }

@@ -8,13 +8,10 @@ namespace Mars_QA_Specflow_T1.Pages
 {
     class Language
     {
-
-
-
         // Add language
         internal void AddLanguage()
         {
-            //Thread.Sleep(10000);
+            
             Wait.WaitForElementVisibility(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div", 10000);
 
             //click on add new language--1
@@ -36,8 +33,7 @@ namespace Mars_QA_Specflow_T1.Pages
             //click on add
             IWebElement add = Driver.driver.FindElement(By.XPath("//input[@value='Add']"));
             add.Click();
-
-            //Thread.Sleep(10000);
+           
             Wait.WaitForElementVisibility(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div", 20000);
             //click on add new language--2
             IWebElement newLang1 = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div"));
@@ -66,7 +62,7 @@ namespace Mars_QA_Specflow_T1.Pages
         //Add language validation
         internal void IsLanguageAdded()
         {
-            //Thread.Sleep(5000);
+            
             Wait.WaitForElementVisibility(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]", 5000);
             IWebElement addedelang = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]"));
             if (addedelang.Text == "English")
@@ -101,7 +97,7 @@ namespace Mars_QA_Specflow_T1.Pages
         //Delete language
         internal void DeleteLanguage()
         {
-            // Thread.Sleep(20000);
+           
             Wait.WaitForElement(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]", 20000);
             try
             {
@@ -123,7 +119,7 @@ namespace Mars_QA_Specflow_T1.Pages
         //Delete language validation
         internal void IsLanguageDeleted()
         {
-            //Thread.Sleep(10000);
+            
             Wait.WaitForElement(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]", 10000);
            //Select language to delete
            IWebElement del = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));

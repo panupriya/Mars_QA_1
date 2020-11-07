@@ -13,7 +13,7 @@ namespace Mars_QA_Specflow_T1.Pages
         //Add Skill
         internal void AddSkill()
         {
-            //Thread.Sleep(10000);
+           
             Wait.WaitForElementVisibility(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]", 10000);
 
             //click on skills
@@ -91,7 +91,7 @@ namespace Mars_QA_Specflow_T1.Pages
         //Edit skill
         internal void EditSkill()
         {
-            //Thread.Sleep(10000);
+            
             Wait.WaitForElementVisibility(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]", 10000);
 
             //click on skills
@@ -148,7 +148,7 @@ namespace Mars_QA_Specflow_T1.Pages
 
         internal void DeleteSkill()
         {
-            //Thread.Sleep(10000);
+           
             Wait.WaitForElementVisibility(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]", 10000);
 
             //click on skills
@@ -183,10 +183,7 @@ namespace Mars_QA_Specflow_T1.Pages
 
             }
 
-
         }
-
-
 
     }
 }

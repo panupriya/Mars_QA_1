@@ -28,7 +28,7 @@ namespace Mars_QA_Specflow_T1.Pages
             // click on login button
             IWebElement loginButton = Driver.driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button"));
             loginButton.Click();
-            //Thread.Sleep(10000);
+           
             try
             {
                 Wait.WaitForElement(Driver.driver, "XPath", "//*[contains(text(),'Ishaan Sandeep')]", 10000);

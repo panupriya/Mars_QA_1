@@ -18,12 +18,14 @@ namespace Mars_QA_Specflow_T1.Steps
             var signin = new LoginPage();
             signin.LoginSteps();
         }
+
         [When(@"I try to add new Language on profile page")]
         public void WhenITryToAddNewLanguageOnProfilePage()
         {
             var addLang = new Language();
             addLang.AddLanguage();
         }
+
         [Then(@"Seller should able to add new language successfully")]
         public void ThenSellerShouldAbleToAddNewLanguageSuccessfully()
         {
@@ -40,6 +42,7 @@ namespace Mars_QA_Specflow_T1.Steps
             var signin = new LoginPage();
             signin.LoginSteps();
         }
+
         [When(@"I edit the Language record")]
         public void WhenIEditTheLanguageRecord()
         {
@@ -56,8 +59,7 @@ namespace Mars_QA_Specflow_T1.Steps
         }
 
 
-
-        //Delete Language
+         //Delete Language
         [Given(@"I click in Delete Button")]
         public void GivenIClickInDeleteButton()
         {
@@ -66,6 +68,7 @@ namespace Mars_QA_Specflow_T1.Steps
             var delLang = new Language();
             delLang.DeleteLanguage();
         }
+
         [Then(@"Seller able to delete language successfully")]
         public void ThenSellerAbleToDeleteLanguageSuccessfully()
         {

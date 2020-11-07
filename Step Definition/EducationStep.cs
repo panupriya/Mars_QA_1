@@ -78,7 +78,5 @@ namespace Mars_QA_Specflow_T1.Steps_Definision
             checkEdel.IsEducationDeleted();
         }
 
-
-
     }
 }

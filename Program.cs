@@ -37,26 +37,10 @@ namespace Mars_QA_Specflow_T1
         //    proDel.DeleteLanguage(driver);
 
         //    proDel.IsLanguageDeleted(driver);
-
-        //    //scenario -3 Add education
-
-        //    ProfilePage addEdu = new ProfilePage();
-
-        //    addEdu.AddEducation(driver, country, title, year);
-
-        //    addEdu.IsEducationAdded(driver);
-
-        //    //scenario -3(a) update education
-        //    ProfilePage updateEdu = new ProfilePage();
-        //    updateEdu.UpdateEducation(driver, titleName);
-
-        //    updateEdu.IsEducationUpdated(driver);
-
+       
         //    // close instances of open chrome driver
         //    driver.Dispose();
         //}
-
-
 
     }
 }
