@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[16.7.1, )"
             },
+            "Microsoft.Office.Interop.Excel": {
+              "target": "Package",
+              "version": "[15.0.4795.1000, )"
+            },
             "Microsoft.TestPlatform.TestHost": {
               "target": "Package",
               "version": "[16.7.1, )"

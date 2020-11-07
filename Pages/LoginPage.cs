@@ -25,6 +25,11 @@ namespace Mars_QA_Specflow_T1.Pages
             IWebElement passward = Driver.driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[2]/input"));
             passward.SendKeys("ishaansandeep");
 
+            ////Click on Remember me
+            
+            //IWebElement Remember = Driver.driver.FindElement(By.Name("rememberDetails"));
+            //Remember.Click();
+
             // click on login button
             IWebElement loginButton = Driver.driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button"));
             loginButton.Click();
