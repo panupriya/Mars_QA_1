@@ -23,8 +23,9 @@ namespace Mars_QA_Specflow_T1.Hooks
             Driver driver = new Driver();
             driver.Initialize();
 
-            //ExcelLibHelpers.PopulateInCollection(@"D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\SpecflowData\Mars.xlsx", "Credentials");
-            //Thread.Sleep(10000);
+            ExcelLibHelpers.PopulateInCollection(@"D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\SpecflowTests\Data\Mars.xlsx", "Credentials");
+            Thread.Sleep(5000);
+            
         }
 
         [AfterScenario]

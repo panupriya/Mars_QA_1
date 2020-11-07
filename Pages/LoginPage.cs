@@ -15,8 +15,7 @@ namespace Mars_QA_Specflow_T1.Pages
         internal void LoginSteps()
         {
             
-            ExcelLibHelpers.PopulateInCollection(@"D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\SpecflowData\Data\Mars.xlsx", "Credentials");
-            Thread.Sleep(10000);
+           
         
            //click on signin button
             IWebElement signin = Driver.driver.FindElement(By.XPath("//*[@id='home']/div/div/div[1]/div/a"));
