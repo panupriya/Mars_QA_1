@@ -12,42 +12,27 @@ namespace Mars_QA_Specflow_T1.Steps_Definision
     [Binding]
     public sealed class EducationStep
     {
-        IWebDriver driver = new ChromeDriver();
-        //[BeforeScenario]
-
-        //public void LaunchBrowser()
-        //{
-        //    // initialise driver
-        //    driver = new ChromeDriver();
-
-        //}
-
-        [AfterScenario]
-        public void Dispose()
-        {
-            // close the window and release the memory
-            driver.Dispose();
-        }
+      
         // Add education Details
         [Given(@"I login to Mars website with valid credentials")]
         public void GivenILoginToMarsWebsiteWithValidCredentials()
         {
             var signin = new LoginPage();
-            signin.LoginSteps(driver);
+            signin.LoginSteps();
         }
 
         [When(@"I add education details as '(.*)','(.*)','(.*)'")]
         public void WhenIAddEducationDetailsAs(string Country, string Title, string Year)
         {
             var addEdu = new Education();
-            addEdu.AddEducation(driver, Country, Title, Year);
+            addEdu.AddEducation(Country, Title, Year);
         }
 
         [Then(@"Seller should able to add education successfully")]
         public void ThenSellerShouldAbleToAddEducationSuccessfully()
         {
             var addeduval = new Education();
-            addeduval.IsEducationAdded(driver);
+            addeduval.IsEducationAdded();
         }
 
 
@@ -56,21 +41,21 @@ namespace Mars_QA_Specflow_T1.Steps_Definision
         public void GivenILoginToTheWebsiteForUpdatingEducationDetails()
         {
             var signin = new LoginPage();
-            signin.LoginSteps(driver);
+            signin.LoginSteps();
         }
 
         [When(@"I update title in the education detail'(.*)'")]
         public void WhenIUpdateTitleInTheEducationDetail(string Title)
         {
             var updateEdu = new Education();
-            updateEdu.UpdateEducation(driver, Title);
+            updateEdu.UpdateEducation(Title);
         }
 
         [Then(@"I should be able to update the education details successfully")]
         public void ThenIShouldBeAbleToUpdateTheEducationDetailsSuccessfully()
         {
             var updateeduval = new Education();
-            updateeduval.IsEducationUpdated(driver);
+            updateeduval.IsEducationUpdated();
         }
 
        
@@ -79,10 +64,10 @@ namespace Mars_QA_Specflow_T1.Steps_Definision
         public void GivenIClickInDeleteEducationButton()
         {
             var signin = new LoginPage();
-            signin.LoginSteps(driver);
+            signin.LoginSteps();
 
             var delEdu = new Education();
-            delEdu.DeleteEducation(driver);
+            delEdu.DeleteEducation();
         }
 
 
@@ -90,7 +75,7 @@ namespace Mars_QA_Specflow_T1.Steps_Definision
         public void ThenSellerAbleToDeleteEducationSuccessfully()
         {
             var checkEdel = new Education();
-            checkEdel.IsEducationDeleted(driver);
+            checkEdel.IsEducationDeleted();
         }
 
 

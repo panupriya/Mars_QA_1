@@ -12,36 +12,24 @@ namespace Mars_QA_Specflow_T1.Steps
     [Binding]
     public sealed class SkillsStep
     {
-
-
-        IWebDriver driver = new ChromeDriver();
-        
-
-        [AfterScenario]
-        public void Dispose()
-        {
-            // close the window and release the memory
-            driver.Dispose();
-        }
-
         //Add skills
         [Given(@"Login to Mars Portal Skill page")]
         public void GivenLoginToMarsPortalSkillPage()
         {
             var signin = new LoginPage();
-            signin.LoginSteps(driver);
+            signin.LoginSteps();
         }
         [When(@"I add skills")]
         public void WhenIAddSkills()
         {
             var addskill = new Skills();
-            addskill.AddSkill(driver);
+            addskill.AddSkill();
         }
         [Then(@"I am able to verify that Skills record added sucessfully")]
         public void ThenIAmAbleToVerifyThatSkillsRecordAddedSucessfully()
         {
             var skillVal = new Skills();
-            skillVal.ValidateSkill(driver);
+            skillVal.ValidateSkill();
         }
 
 
@@ -51,26 +39,26 @@ namespace Mars_QA_Specflow_T1.Steps
         public void GivenILoginToTheWebsite()
         {
             var signin = new LoginPage();
-            signin.LoginSteps(driver);
+            signin.LoginSteps();
         }
         [When(@"I click in Edit Button of skill")]
         public void WhenIClickInEditButtonOfSkill()
         {
             var editSkill = new Skills();
-            editSkill.EditSkill(driver);
+            editSkill.EditSkill();
         }
         [When(@"I edit the Skills record")]
         public void WhenIEditTheSkillsRecord()
         {
             var editSDetails = new Skills();
-            editSDetails.EditSkillDetails(driver);
+            editSDetails.EditSkillDetails();
         }
 
         [Then(@"I am able to verify that Skills updated sucessfully")]
         public void ThenIAmAbleToVerifyThatSkillsUpdatedSucessfully()
         {
             var valEdtSkill = new Skills();
-            valEdtSkill.ValidateEditedSkill(driver);
+            valEdtSkill.ValidateEditedSkill();
         }
 
 
@@ -80,20 +68,20 @@ namespace Mars_QA_Specflow_T1.Steps
         public void GivenILoginToTheWebsiteToDleteSkill()
         {
             var signin = new LoginPage();
-            signin.LoginSteps(driver);
+            signin.LoginSteps();
         }
         [When(@"I try to delete addedes skills")]
         public void WhenITryToDeleteAddedesSkills()
         {
             var delSkill = new Skills();
-            delSkill.DeleteSkill(driver);
+            delSkill.DeleteSkill();
 
         }
         [Then(@"I am able to delete the skill successfully")]
         public void ThenIAmAbleToDeleteTheSkillSuccessfully()
         {
             var valDelSkill = new Skills();
-            valDelSkill.ValidateDeletedSkill(driver);
+            valDelSkill.ValidateDeletedSkill();
         }
 
 

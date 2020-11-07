@@ -8,46 +8,27 @@ using TechTalk.SpecFlow;
 namespace Mars_QA_Specflow_T1.Steps
 {
     [Binding]
-    public sealed class LanguageStep
+    public sealed class LanguageStep 
     {
-        IWebDriver driver;
-        [BeforeScenario]
-
-        public void LaunchBrowser()
-        {
-            // initialise driver
-            driver = new ChromeDriver();
-            
-        }
-
-        [AfterScenario]
-            public void Dispose()
-            {
-                // close the window and release the memory
-                driver.Dispose();
-            }
-
-
        
-
         //Add language
         [Given(@"I login to website with valid credentials")]
         public void GivenILoginToWebsiteWithValidCredentials()
         {
             var signin = new LoginPage();
-            signin.LoginSteps(driver);
+            signin.LoginSteps();
         }
         [When(@"I try to add new Language on profile page")]
         public void WhenITryToAddNewLanguageOnProfilePage()
         {
             var addLang = new Language();
-            addLang.AddLanguage(driver);
+            addLang.AddLanguage();
         }
         [Then(@"Seller should able to add new language successfully")]
         public void ThenSellerShouldAbleToAddNewLanguageSuccessfully()
         {
             var verifylang = new Language();
-            verifylang.IsLanguageAdded(driver);
+            verifylang.IsLanguageAdded();
         }
 
 
@@ -57,13 +38,13 @@ namespace Mars_QA_Specflow_T1.Steps
         public void GivenILoginToWebsite()
         {
             var signin = new LoginPage();
-            signin.LoginSteps(driver);
+            signin.LoginSteps();
         }
         [When(@"I edit the Language record")]
         public void WhenIEditTheLanguageRecord()
         {
             var UpLang = new Language();
-            UpLang.UpdateLanguage(driver);
+            UpLang.UpdateLanguage();
         }
 
        
@@ -71,7 +52,7 @@ namespace Mars_QA_Specflow_T1.Steps
         public void ThenSellerShouldAbleToEditLanguageSuccessfully()
         { 
             var verifUpdate = new Language();
-            verifUpdate.IsLanguageUpdateed(driver);
+            verifUpdate.IsLanguageUpdateed();
         }
 
 
@@ -81,20 +62,16 @@ namespace Mars_QA_Specflow_T1.Steps
         public void GivenIClickInDeleteButton()
         {
             var signin = new LoginPage();
-            signin.LoginSteps(driver);
+            signin.LoginSteps();
             var delLang = new Language();
-            delLang.DeleteLanguage(driver);
+            delLang.DeleteLanguage();
         }
         [Then(@"Seller able to delete language successfully")]
         public void ThenSellerAbleToDeleteLanguageSuccessfully()
         {
             var checkdel = new Language();
-            checkdel.IsLanguageDeleted(driver);
+            checkdel.IsLanguageDeleted();
         }
-
-
-
-
 
     }
 }
