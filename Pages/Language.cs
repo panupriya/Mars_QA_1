@@ -39,10 +39,13 @@ namespace Mars_QA_Specflow_T1.Pages
             IWebElement newLang1 = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div"));
             newLang1.Click();
 
-            Thread.Sleep(5000);
+            
             //input  second language
+            Wait.WaitForElementVisibility(Driver.driver, "Name", "name", 5000);
+
             IWebElement inputlangC1 = Driver.driver.FindElement(By.Name("name"));
             inputlangC1.Click();
+
             IWebElement inputlang1 = Driver.driver.FindElement(By.Name("name"));
             inputlang1.SendKeys("Malayalam");
 

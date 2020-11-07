@@ -30,6 +30,11 @@ namespace Mars_QA_Specflow_T1.Helpers
                     var wait = new WebDriverWait(driver, new TimeSpan(0, 0, seconds));
                     wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.CssSelector(value)));
                 }
+                if (key == "Name")
+                {
+                    var wait = new WebDriverWait(driver, new TimeSpan(0, 0, seconds));
+                    wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.Name(value)));
+                }
             }
             catch (Exception ex)
             {
@@ -57,6 +62,11 @@ namespace Mars_QA_Specflow_T1.Helpers
                 {
                     var wait = new WebDriverWait(driver, new TimeSpan(0, 0, seconds));
                     wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector(value)));
+                }
+                if (key == "Name")
+                {
+                    var wait = new WebDriverWait(driver, new TimeSpan(0, 0, seconds));
+                    wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.Name(value)));
                 }
             }
             catch (Exception ex)

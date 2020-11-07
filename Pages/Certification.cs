@@ -52,7 +52,7 @@ namespace Mars_QA_Specflow_T1.Pages
             IWebElement addCerti1 = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div"));
             addCerti1.Click();
 
-            Thread.Sleep(10000);
+            Wait.WaitForElementVisibility(Driver.driver, "Name", "certificationName", 10000);
             //input second certification
             IWebElement inputCer1 = Driver.driver.FindElement(By.Name("certificationName"));
             inputCer1.Click();

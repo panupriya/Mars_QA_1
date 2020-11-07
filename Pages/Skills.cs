@@ -51,7 +51,8 @@ namespace Mars_QA_Specflow_T1.Pages
             IWebElement addSkill2 = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/thead/tr/th[3]/div"));
             addSkill2.Click();
 
-            Thread.Sleep(5000);
+            
+            Wait.WaitForElementVisibility(Driver.driver, "Name", "name", 5000);
             //input skill
             IWebElement inputskillC2 = Driver.driver.FindElement(By.Name("name"));
             inputskillC2.Click();
@@ -116,6 +117,7 @@ namespace Mars_QA_Specflow_T1.Pages
         {
             //update data from dropdown list
             //select skill level
+            Wait.WaitForElementVisibility(Driver.driver, "Name", "level", 5000);
             IWebElement skillLevelUp = Driver.driver.FindElement(By.Name("level"));
             skillLevelUp.Click();
 
