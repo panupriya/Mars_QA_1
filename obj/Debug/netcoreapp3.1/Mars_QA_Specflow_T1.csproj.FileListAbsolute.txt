@@ -226,3 +226,5 @@ D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.genruntimeconfig.cache
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\ExcelDataReader.dll
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\ExcelDataReader.DataSet.dll
+D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\Microsoft.Office.Interop.Excel.dll
+D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.csproj.CoreCompileInputs.cache

@@ -1,10 +1,12 @@
-﻿using Mars_QA_Specflow_T1.Pages;
+﻿using Mars_QA_Specflow_T1.Helpers;
+using Mars_QA_Specflow_T1.Pages;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace Mars_QA_Specflow_T1.Hooks
@@ -21,8 +23,8 @@ namespace Mars_QA_Specflow_T1.Hooks
             Driver driver = new Driver();
             driver.Initialize();
 
-            //ExcelLibHelper.PopulateInCollection(@"D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\Data\Mars.xlsx", "Credentials");
-
+            //ExcelLibHelpers.PopulateInCollection(@"D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\SpecflowData\Mars.xlsx", "Credentials");
+            //Thread.Sleep(10000);
         }
 
         [AfterScenario]

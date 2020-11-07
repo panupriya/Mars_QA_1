@@ -9,21 +9,28 @@ namespace Mars_QA_Specflow_T1.Pages
 {
     class LoginPage
     {
+        public string username { get; private set; }
+       
+
         internal void LoginSteps()
         {
-            
-
-            //click on signin button
+            Thread.Sleep(10000);
+            ExcelLibHelpers.PopulateInCollection(@"D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\SpecflowData\Mars.xlsx", "Credentials");
+            Thread.Sleep(10000);
+        
+           //click on signin button
             IWebElement signin = Driver.driver.FindElement(By.XPath("//*[@id='home']/div/div/div[1]/div/a"));
             signin.Click();
 
             //enter users email address 
             IWebElement email = Driver.driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[1]/input"));
-            email.SendKeys("ishaansandeep@yahoo.com");
+            //email.SendKeys("ishaansandeep@yahoo.com");
+             email.SendKeys(ExcelLibHelpers.ReadData(2, "username"));
             
             //enter passward
-            IWebElement passward = Driver.driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[2]/input"));
-            passward.SendKeys("ishaansandeep");
+            IWebElement password = Driver.driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[2]/input"));
+            // passward.SendKeys("ishaansandeep");
+             password.SendKeys(ExcelLibHelpers.ReadData(2, "password"));
 
             ////Click on Remember me
             
