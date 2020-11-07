@@ -182,11 +182,11 @@ namespace Mars_QA_Specflow_T1.Pages
         //validate deleted successfully or not
         internal void IsEducationDeleted()
         {
-           
-            Wait.WaitForElement(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[3]", 1000);
+            
+            Wait.WaitForElement(Driver.driver, "XPath", "//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[1]", 1000);
             //Select language to delete
-            IWebElement deledu = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[3]"));
-            if (deledu.Text != "M.Tech")
+            IWebElement deledu = Driver.driver.FindElement(By.XPath("//div[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
+            if (deledu.Text != "Austalia")
             {
                 Console.WriteLine("Education deleted succesfully");
 

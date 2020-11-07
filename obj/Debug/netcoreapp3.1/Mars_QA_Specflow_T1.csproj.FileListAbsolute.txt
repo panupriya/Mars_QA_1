@@ -220,8 +220,10 @@ D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\runtimes\win\lib\n
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.csprojAssemblyReference.cache
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.AssemblyInfoInputs.cache
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.AssemblyInfo.cs
-D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.csproj.CoreCompileInputs.cache
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.csproj.CopyComplete
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.dll
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.pdb
 D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.genruntimeconfig.cache
+D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\ExcelDataReader.dll
+D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\bin\Debug\netcoreapp3.1\ExcelDataReader.DataSet.dll
+D:\ic test\Repo-IC Mars-QA1\Mars_QA_1\obj\Debug\netcoreapp3.1\Mars_QA_Specflow_T1.csproj.CoreCompileInputs.cache
